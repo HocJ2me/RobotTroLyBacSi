@@ -31,9 +31,9 @@ void setup() {
   Serial2.begin(9600);
   LCD_Setup();
   
-  xTaskCreate(TaskDocDuLieu, "Task1", 1000, NULL, 1, NULL);
-  xTaskCreate(TaskDieuKhienRobot, "Task2", 1000, NULL, 2, NULL);
-  xTaskCreate(TaskHienThiLCD, "IdleTask", 1000, NULL, 0, NULL);
+  xTaskCreate(TaskDocDuLieu, "Doc du lieu", 2048, NULL, 1, NULL);
+  xTaskCreate(TaskDieuKhienRobot, "dieu khien", 2048, NULL, 2, NULL);
+  xTaskCreate(TaskHienThiLCD, "Hien thi", 2048, NULL, 0, NULL);
 }
 
 void loop() 
